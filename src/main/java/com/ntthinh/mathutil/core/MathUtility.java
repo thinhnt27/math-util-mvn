@@ -26,7 +26,7 @@ public class MathUtility {
             throw new IllegalArgumentException("Invalid n. n must be 0..20");
         if(n == 0 || n == 1)
             return 1;
-        long result = 1; //sống sót đến lệnh này , sure n= 2..20
+        long result = 10; //sống sót đến lệnh này , sure n= 2..20
         for (int i = 2; i <= n; i++) 
             result *= i;
         

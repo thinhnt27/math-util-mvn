@@ -55,5 +55,4 @@ public class MathUtilityTest {
     public void verifyFactorialGivenRightArgument6ReturnOk(){
         assertEquals(720, MathUtility.getFactorial(6));
     }
-    
 }
