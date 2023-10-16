@@ -25,11 +25,31 @@ public class MathUtility {
         if(n < 0 || n > 20)
             throw new IllegalArgumentException("Invalid n. n must be 0..20");
         if(n == 0 || n == 1)
-            return 1;
-        long result = 10; //sống sót đến lệnh này , sure n= 2..20
-        for (int i = 2; i <= n; i++) 
-            result *= i;
+            return 1;   //NEEYS N ĐẶC BIỆT TA RETURN SỚM HƠN
+        return n * getFactorial(n-1);
+        //tối ưu code, thay ruột của hàm để chạy ngon hơn chẳn hạn, nhanh hơn nếu muốn hoặc code viết đẹp hơn hoặc fix bug thì sửa code
+        //DÙ BẠN SỬA CODE GVIF LÍ DO GÌ THÌ CODE PHẢI ĐƯỢC TEST LẠI VÀ TEST LẠI ĐỂ ĐẢM BẢO RẰNG NÓ VẪN XANH NHƯ LẦN TRC
+        //NẾU TA VIẾT CODE ĐI KÈM TEST SCRIPT THÌ VIỆC TEST HÀM LẠI
+        //CÁI HÀM SẼ CỰC NHANH, KHÔNG CẦN DÙNG MẮT ĐỂ ĐO TỪNG DÒNG LỆNH ĐÚNG
+        //SAI, MÀ CHỈ NHÌN MÀU XANH LÀ ĐỦ - VIFHAMF TRẢ VỀ NHƯ EXPECTED
+        //TEST LẠI NHỮNG GÌ ĐÃ TỪNG TEST -> REGRESSION TEST KIỂM THỬ HỒI QUY
+        //KIỂM THỬ LẠI HÀM LÚC NÀY CỰC NHANH, VÌ GUTHUB ACTIONS LO GIÙM
+        //TA CHỈ CẦN MÀU XANH, HOẶC NHẬN EMAIL CHỬI VÌ CODE ĐỎ
         
-        return result;
+        //N! = N X (N-1)! -> ĐỆ QUY XUẤT HIỆN
+        //ĐỆ QUY - RECURSION - GỌI LẠI CHÍNH MÌNH VỚI QUY MÔ NHỎ HƠN
+
     }
+    
+//    public static long getFactorial(int n){
+//        if(n < 0 || n > 20)
+//            throw new IllegalArgumentException("Invalid n. n must be 0..20");
+//        if(n == 0 || n == 1)
+//            return 1;
+//        long result = 1; //sống sót đến lệnh này , sure n= 2..20
+//        for (int i = 2; i <= n; i++) 
+//            result *= i;
+//        
+//        return result;
+//    }
 }
